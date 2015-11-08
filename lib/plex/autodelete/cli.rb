@@ -50,7 +50,7 @@ module Plex
           host: ask("Plex Server address", default: '127.0.0.1') ,
           port: ask("Plex Server port:", default: 32400),
           token: token,
-          skip: ask("Shows to include [comma seperated list]").split(','),
+          includeshows: ask("Shows to include [comma seperated list]").split(','),
           delete: true,
           section: 1
         }
