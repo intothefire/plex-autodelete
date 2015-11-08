@@ -57,7 +57,7 @@ module Plex
       def self.process_show show
         puts nil
         puts "#{show.title}".bold
-        show_skipped = !@config[:includeshows].include? show.title
+        show_skipped = !@config[:includeshows].include?(show.title)
         show.seasons.each do |season|
           self.process_season season, show_skipped
         end
