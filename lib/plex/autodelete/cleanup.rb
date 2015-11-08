@@ -60,7 +60,7 @@ module Plex
         show_skipped = !@config[:includeshows].include?(show.title)
         show.seasons.each do |season|
           self.process_season season, show_skipped
-        end
+        end unless show_skipped
       end
 
       def self.process_season season, show_skipped
